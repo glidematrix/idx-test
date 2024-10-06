@@ -2,7 +2,8 @@
 { pkgs, ... }: {
 
   packages = [
-    pkgs.python
+    pkgs.python312
+    pkgs.python312Packages.pip
   ];
 
   # Shell script that produces the final environment
