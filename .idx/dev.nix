@@ -7,6 +7,7 @@
   packages = [
     # pkgs.python3
     pkgs.python312
+    pkgs.python312Packages.pip
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -23,7 +24,7 @@
         #   source .venv/bin/activate
         #   pip install -r mysite/requirements.txt
         # '';
-        create-venv = ''
+        install-pkgs = ''
           pip install -r requirements.txt
         '';
         # Open editors for the following files by default, if they exist:
