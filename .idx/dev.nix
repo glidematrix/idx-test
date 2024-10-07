@@ -3,10 +3,10 @@
   channel = "stable-24.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.python312
-    pkgs.python312Packages.pip
-    pkgs.python312Packages.quart
-    pkgs.python312Packages.python-dotenv
+    pkgs.python3
+    pkgs.python311Packages.pip
+    pkgs.python311Packages.quart
+    pkgs.python311Packages.python-dotenv
   ];
   # Sets environment variables in the workspace
   env = {};
