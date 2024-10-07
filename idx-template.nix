@@ -4,13 +4,16 @@
   packages = [
     pkgs.python312
     pkgs.python312Packages.pip
+    pkgs.python312Packages.quart
+    pkgs.python312Packages.python-dotenv
   ];
 
   # Shell script that produces the final environment
   bootstrap = ''
-    # Copy the folder containing the `idx-template` files to the final
-    # project folder for the new workspace. ${./.} inserts the directory
-    # of the checked-out Git folder containing this template.
+    mkdir "$out"
+    mkdir -p "$out/.idx/"
+    cp -rf ${./dev.nix} "$out/.idx/dev.nix"
+    
     cp -rf ${./.} "$out"
 
     # Set some permissions
